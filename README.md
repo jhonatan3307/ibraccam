@@ -1,6 +1,6 @@
 # IBRACCAM 
 ## Outubro Rosa 🎗
-Site desenvolvido para conscientização e prevenção da câncer de mama
+Site desenvolvido para conscientização e prevenção do câncer de mama
 
 ## Como usar
 Abra o index.html em seu navegador

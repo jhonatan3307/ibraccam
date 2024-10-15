@@ -133,11 +133,18 @@ footer {
     padding: 20px;
 }
 
-footer .social-media a img {
+footer .social-media a  { /*usei os icons do bootstrap*/
+    color: #fff;
     width: 30px;
     margin: 0 10px;
+    transition: color 0.3s; /*o tempinho da mudanca de cor do icon*/
 }
 
+footer .social-media a:hover { /*baguio de passar o mouse por cima*/
+    color: #ff66c4;
+
+    }
+    
 footer p {
     margin-top: 10px;
 }

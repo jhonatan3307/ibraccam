@@ -1,0 +1,175 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+/*cabecalgo onde fica os coiso la de sobre nos o coiso la de cima*/
+header {
+    background-color: #fde6f6;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*logo ne carai*/
+.logo img {
+    max-width: 100px;
+}
+/*aqui e foto das muie*/
+.guerreiras {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.guerreiras img {
+    max-width: 150px;
+    height: 150px; 
+    object-fit: cover; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+/*quem somos nos buttom*/
+.QSMS-button {
+    background-color: #ff4081;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.QSMS-button:hover {
+    background-color: #e0356b;
+}
+/*secao principal*/
+.main-section {
+    position: relative;
+    text-align: center;
+}
+/*aqui é os coiso daquele banner*/
+.slider {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+}
+
+.slide img {
+    width: 50%;
+    height: auto;
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.slide-text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+/*aqui e um botao que eu n sei mto bem oq fazer*/
+.cta-button {
+    background-color: #ff66c4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #fde6f6;
+}
+
+/* aqui é o sobre */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #666;
+}
+
+footer {
+    background-color: #fca8d8;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-media a img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.50s ease-in-out, visibility 0.35s ease-in-out;
+  }
+  
+  .menu li:hover .submenu {
+    opacity: 10;
+    visibility: visible;
+  }
+  
+  /*aqui é o texto escondido*/
+.ibraccam-text {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff; 
+    padding: 20px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+}
+
+/* aqui é pra quadno passar o mouse por cimna ele fazer o coiso aparecer*/
+.slider:hover .ibraccam-text {
+    opacity: 1;
+    visibility: visible;
+}

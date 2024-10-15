@@ -1,10 +1,9 @@
-COMO RODAR O CÓDIGO:
-1- ABRA O INDEX.HTML EM SEU NAVEGADOR
+# IBRACCAM 
+## Outubro Rosa 🎗
+Site desenvolvido para conscientização e prevenção da câncer de mama
 
- __  .______   .______          ___       ______   ______     ___      .___  ___.   
-|  | |   _  \  |   _  \        /   \     /      | /      |   /   \     |   \/   |   🎗
-|  | |  |_)  | |  |_)  |      /  ^  \   |  ,----'|  ,----'  /  ^  \    |  \  /  |   🎗
-|  | |   _  <  |      /      /  /_\  \  |  |     |  |      /  /_\  \   |  |\/|  |   🎗
-|  | |  |_)  | |  |\  \----./  _____  \ |  `----.|  `----./  _____  \  |  |  |  |   🎗
-|__| |______/  | _| `._____/__/     \__\ \______| \______/__/     \__\ |__|  |__|   🎗
-                                                                                  
+## Como usar
+Abra o index.html em seu navegador
+
+## Créditos
+<img src="https://cdn.icon-icons.com/icons2/3685/PNG/512/github_logo_icon_229278.png" alt="github logo" width="20"> <a href="https://github.com/jhonatan3307"> Jhonatan Lisboa </a>  <br>    <img src="https://cdn.icon-icons.com/icons2/3685/PNG/512/github_logo_icon_229278.png" alt="github logo" width="20"> <a href="https://github.com/Rafaellpzzz"> Rafael Lopes </a>   <br>    <img src="https://cdn.icon-icons.com/icons2/3685/PNG/512/github_logo_icon_229278.png" alt="github logo" width="20"> <a href="https://github.com/Rafaellpzzz"> Niko </a>                                                                    

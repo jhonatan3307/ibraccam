@@ -209,3 +209,30 @@ footer p {
 }
 
 
+/*setinha build*/
+.esquerda {
+width: 70px;
+position: absolute;
+right: 0px;
+bottom: 40%;
+opacity: 0;
+transition: right 0.80s;
+}
+.direita {
+    width: 70px;
+position: absolute;
+left: 0px;
+bottom: 40%;
+opacity: 0;
+transition: left 0.80s;
+}
+
+.slider:hover .esquerda {
+right: 170px;
+opacity: 1;
+}
+
+.slider:hover .direita {
+    left: 170px;
+    opacity: 1;
+    }

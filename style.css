@@ -30,13 +30,15 @@ header {
 .guerreiras {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    
 }
 
 .guerreiras img {
     max-width: 150px;
     height: 150px; 
     object-fit: cover; 
+
 }
 
 nav ul {
@@ -81,7 +83,7 @@ nav ul li a {
 
 .slide img {
     width: 50%;
-    height: auto;
+    height: absolute;
 }
 
 .slide-text {
@@ -97,20 +99,42 @@ nav ul li a {
     font-size: 48px;
     line-height: 1.2;
 }
-/*aqui e um botao que eu n sei mto bem oq fazer*/
-.cta-button {
-    background-color: #ff66c4;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    cursor: pointer;
+/*aqui e um botao que eu n sei mto bem oq fazer
+
+atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
+*/
+.cta-container {
+    position: relative;
 }
 
-.cta-button:hover {
+.cta-button {
     background-color: #fde6f6;
+    color: #ff66c4;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    width: 150px; 
+    display: inline-block;
 }
+
+.map-area {
+    display: none; /*isso é pro mapa ficar inviisivel*/
+    margin-top: 10px;
+    transition: opacity 0.3s ease; /* Transição suave para a área do mapa */
+}
+
+.cta-button:hover + .map-area {
+    display: block; 
+    opacity: 1; 
+}
+
+.map-area {
+    opacity: 0; /* Inicialmente invisível */
+}
+
 
 /* aqui é o sobre */
 .about-section {
@@ -130,7 +154,8 @@ footer {
     background-color: #fca8d8;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+
 }
 
 footer .social-media a  { /*usei os icons do bootstrap*/
@@ -163,15 +188,15 @@ footer p {
 .ibraccam-text {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.7); 
-    color: #fff; 
-    padding: 20px;
+    transition: opacity 0.50s ease-in-out, visibility 0.5s ease-in-out;
+    background-color:  #fde6f6;
+    color: #ff66c4; 
+    padding: 30px;
     position: absolute;
-    bottom: 10%;
+    bottom: 23%;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 50%;
     text-align: center;
 }
 

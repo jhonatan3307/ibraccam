@@ -13,7 +13,7 @@ body {
 }
 /*cabecalgo onde fica os coiso la de sobre nos o coiso la de cima*/
 header {
-    background-color: #fca8d8;
+    background-color: #fde6f6;
     border-bottom: 1px solid #e0e0e0;
     padding: 10px 20px;
 }
@@ -152,11 +152,11 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
 }
 /*rodape*/
 footer {
-    background-color: #fca8d8;
-    color: #fff;
+    background-color: #fde6f6;
+    color: #333;
     text-align: center;
     padding: 30px;
-
+    font-weight: bold;
 }
 
 footer .social-media a  { /*usei os icons do bootstrap*/

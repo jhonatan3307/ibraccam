@@ -164,7 +164,7 @@ footer {
 }
 
 footer .social-media a  { /*usei os icons do bootstrap*/
-    color: #fff;
+    color: #333;
     width: 30px;
     margin: 0 10px;
     transition: color 0.3s; /*o tempinho da mudanca de cor do icon*/

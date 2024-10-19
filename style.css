@@ -117,7 +117,6 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    margin-top: 20px;
     cursor: pointer;
     transition: all 0.6s ease; 
     width: 150px; 
@@ -125,18 +124,21 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
 }
 
 .map-area {
-    display: none; /*isso é pro mapa ficar inviisivel*/
+    opacity: 0;
+    visibility: hidden;/*isso mantem o mapinha fora da tela*/
     margin-top: 10px;
-    transition: opacity 0.3s ease; /* Transição suave para a área do mapa */
+    transition: opacity 0.6s ease; /* Transição suave para a área do mapa *//*n tava tao suanve e mudei pra 0.6*/
 }
 
 .cta-button:hover + .map-area {
-    display: block; 
-    opacity: 1; 
+   opacity: 1;
+   visibility: visible;
+   transition: opacity 0.6s ease, visibility 0s 0s,
 }
 
-.map-area {
-    opacity: 0; /* Inicialmente invisível */
+.map-area { /*tamanho do mapa*/
+     width: 300px;
+    height: 200px; 
 }
 
 

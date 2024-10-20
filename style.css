@@ -32,15 +32,24 @@ header {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-top: 20px;
+    text-align: center; /*centraliza o texto e a img*/
     
 }
 
 .guerreiras img {
     max-width: 150px;
     height: 150px; 
-    object-fit: cover; 
-
+    object-fit: cover;
+    border-radius: 50%; /* bordinha redonda aquela pique foto do dc*/
+    border: 3px solid #ff66c4; /* cor da borda lindas*/
 }
+
+.guerreiras p {
+    /* cor do texto e tamanho*/
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
 
 nav ul {
     list-style: none;

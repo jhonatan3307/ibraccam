@@ -126,7 +126,7 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
 
 .map-area {
     opacity: 0;
-    visibility: hidden; /*usado pa dexa o mapa escondido e invisivel com a opacity no 0*/
+    visibility: hidden; usado pa dexa o mapa escondido e invisivel com a opacity no 0*/
     margin-top: 10px;
     transition: opacity 0.6s ease; /* Transição suave para a área do mapa *//*n tava tao suanve e mudei pra 0.6*/
 }
@@ -183,6 +183,7 @@ footer p {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.50s ease-in-out, visibility 0.35s ease-in-out;
+    
     
   }
   

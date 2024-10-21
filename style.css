@@ -25,16 +25,22 @@ header {
 }
 /*logo ne carai*/
 .logo img {
-    max-width: 100px;
+    max-width: 50px;
 }
 /*aqui e foto das muie*/
 .guerreiras {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-    text-align: center; /*centraliza o texto e a img*/
-    
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.guerreiras div {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    max-width: 300px;
+    margin: 10px;
 }
 
 .guerreiras img {
@@ -51,16 +57,27 @@ header {
     font-size: 16px;
     color: #333;
 }
+
+.guerreiras h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 55px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: bold;
+}
+
+nav ul li a:hover { /*baguio de passar o mouse por cima*/
+    color: #ff66c4;
+    transition: opacity 0.50s ease-in-out, visibility 0.35s ease-in-out;
 }
 /*quem somos nos buttom*/
 .QSMS-button {
@@ -129,15 +146,17 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.6s ease; 
-    width: 150px; 
+    width: 250px; 
+    height: 50px;
     text-align: center; 
 }
 
 .map-area {
     opacity: 0;
-    visibility: hidden; usado pa dexa o mapa escondido e invisivel com a opacity no 0*/
+    visibility: hidden; /*usado pa dexa o mapa escondido e invisivel com a opacity no 0*/
     margin-top: 10px;
-    transition: opacity 0.6s ease; /* Transição suave para a área do mapa *//*n tava tao suanve e mudei pra 0.6*/
+    transition: opacity 0.6s ease; /* Transição suave para a área do mapa */
+    /*n tava tao suanve e mudei pra 0.6*/
 }
 
 .cta-button:hover + .map-area {
@@ -153,31 +172,46 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
 
 /* aqui é o sobre */
 .about-section {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
+    background-image: url('fotos e imagens/fundo2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 80px 20px;
+    color: white; 
     text-align: center;
+    width: 100vw; 
+    height: 600px;
+    box-sizing: border-box; 
+}
+
+.about-section h1 {
+    font-size: 2.5em; 
+    margin-top: -50px;  
+    color: #e0356b; 
 }
 
 .about-section p {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; 
+    margin: 0 auto; 
     font-size: 18px;
-    color: #666;
+    line-height: 1.6; 
+    margin-top: 200px; 
 }
+
 /*rodape*/
 footer {
-    background-color: #fde6f6;
-    color: #333;
+    background-color:  #c0246c;
+    color: white;
     text-align: center;
     padding: 30px;
     font-weight: bold;
 }
 
 footer .social-media a  { /*usei os icons do bootstrap*/
-    color: #333;
+    color: white;
     width: 30px;
     margin: 0 10px;
-    transition: color 0.3s; /*o tempinho da mudanca de cor do icon*/
+    transition: color 0.6s; /*o tempinho da mudanca de cor do icon*/
 }
 
 footer .social-media a:hover { /*baguio de passar o mouse por cima*/
@@ -210,7 +244,7 @@ footer p {
     color: #ff66c4; 
     padding: 30px;
     position: absolute;
-    bottom: 23%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     width: 50%;

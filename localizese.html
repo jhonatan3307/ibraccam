@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Localize-se </title>
+
+    <!--link pra fav icon do site-->
+    <link rel="icon" type="image/x-icon" href="fotos e imagens/ibraccamico.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <!--esse stylesheet e pra colocar fotos das redes sociais ok? se nao quiser mexer blz-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        .texto {
+            display: none; /* Esconde todos os textos inicialmente */
+            margin-top: 20px;
+        }
+         
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="fotos e imagens/logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Sobre</a>
+                        <ul class="submenu">
+                            <li><a href="#">Nossa Missão</a></li>
+                            <br>
+                            <li><a href="#">História</a></li>
+                            <br>
+                            <li><a href="#">Equipe</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Câncer de Mama</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sintomas</a></li>
+                            <br>
+                            <li><a href="#">Tratamentos</a></li>
+                            <br>
+                            <li><a href="#">Prevenção</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Campanhas</a>
+                        <ul class="submenu">
+                            <li><a href="#">Outubro Rosa</a></li>
+                            <br>
+                            <li><a href="#">Doe Agora</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEUDO AQUI-->
+    <main>
+        <h1>Localize-se </h1>
+        <label for="bairro"> Bairro </label>
+        <form name="formid">
+            <select name="escolhebairro" id="idbairro" onchange="selecionadordeBairro()">
+                <optgroup label="Zona Leste">
+                    <option value="belem">Belém</option>
+                    <option value="bras">Brás</option>
+                    <option value="carrao">Carrão</option>
+                    <option value="cidade_tiradentes">Cidade Tiradentes</option>
+                    <option value="iguatemi">Iguatemi</option>
+                    <option value="itaquera">Itaquera</option>
+                    <option value="jardim_analia_franco">Jardim Anália Franco</option>
+                    <option value="mooca">Mooca</option>
+                    <option value="penha">Penha</option>
+                    <option value="sao_mateus">São Mateus</option>
+                    <option value="tatuape">Tatuapé</option>
+                    <option value="mooca_sul">Mooca</option>
+                    <option value="sapopemba">Sapopemba</option>
+                    <option value="aricanduva">Aricanduva</option>
+                    <option value="vila_formosa" selected>Vila Formosa</option>
+                </optgroup>
+                <optgroup label="Centro">
+                    <option value="se">Sé</option>
+                    <option value="bela_vista">Bela Vista</option>
+                    <option value="bom_retiro">Bom Retiro</option>
+                    <option value="cambuci">Cambuci</option>
+                    <option value="consolacao">Consolação</option>
+                    <option value="liberdade">Liberdade</option>
+                    <option value="republica">República</option>
+                    <option value="santa_cecilia">Santa Cecília</option>
+                </optgroup>
+                <optgroup label="Zona Oeste">
+                    <option value="butanta">Butantã</option>
+                    <option value="morumbi">Morumbi</option>
+                    <option value="raposo_tavares">Raposo Tavares</option>
+                    <option value="rio_pequeno">Rio Pequeno</option>
+                    <option value="vila_sonia">Vila Sônia</option>
+                    <option value="lapa">Lapa</option>
+                    <option value="barra_funda">Barra Funda</option>
+                    <option value="jaguara">Jaguara</option>
+                    <option value="jaguare">Jaguaré</option>
+                    <option value="perdizes">Perdizes</option>
+                    <option value="vila_leopoldina">Vila Leopoldina</option>
+                    <option value="pinheiros">Pinheiros</option>
+                    <option value="alto_pinheiros">Alto de Pinheiros</option>
+                    <option value="itaim_bibi">Itaim Bibi</option>
+                    <option value="jardim_paulista">Jardim Paulista</option>
+                </optgroup>
+                <optgroup label="Zona Norte">
+                    <option value="santana">Santana</option>
+                    <option value="mandaqui">Mandaqui</option>
+                    <option value="jacana">Jaçanã</option>
+                    <option value="tremembe">Tremembé</option>
+                    <option value="vila_guilherme">Vila Guilherme</option>
+                    <option value="vila_maria">Vila Maria</option>
+                    <option value="tucuruvi">Tucuruvi</option>
+                    <option value="vila_medeiros">Vila Medeiros</option>
+                </optgroup>
+                <optgroup label="Zona Sul">
+                    <option value="grajau">Grajaú</option>
+                    <option value="sacoma">Sacomã</option>
+                    <option value="ipiranga">Ipiranga</option>
+                    <option value="sapopemba">Sapopemba</option>
+                    <option value="moema">Moema</option>
+                </optgroup>
+            </select>
+        </form>
+        
+        <label id="labelbairro"></label>
+
+        <!-- Textos correspondentes -->     
+         <div class="textobairros">
+        <div id="belem" class="texto"><p> As UBS na região de Belém ou proximidades são: </p>
+            <h2> UBS Belenzinho - Marcus Wolosker</h2>
+            <h3> Rua: Av. Celso Garcia, 1749 - Belenzinho<br>
+                CEP: 03015-000<br></h3></div>
+        <div id="bras" class="texto"><p> As UBS na região de Brás ou proximidades são: </p>
+            <h2> UBS Brás - Dr. Manoel Saldiva Neto</h2>
+            <h3> Rua: R. Sampson, 61 - Brás<br>
+                CEP: 03013-040<br></h3></div>
+        <div id="carrao" class="texto"><p> As UBS na região de Carrão ou proximidades são: </p>
+            <h2> UBS Vila Carrão</h2>
+            <h3> Rua: R. Dr. Jaci Barbosa, 280 - V. Carrão<br>
+                CEP: 03447-000<br>
+               </h3>
+            <h2> UBS Vila Nova Manchester - Dr. Arlindo Gennari</h2>
+            <h3> Rua: Pça. Haroldo Daltro, 461 - V. Nova Manchester<br>
+                CEP: 03444-090<br>
+                </h3></div>
+        <div id="cidade_tiradentes" class="texto"><p> As UBS na região de Cidade Tiradentes ou proximidades são: </p>
+            <h2> UBS Barro Branco</h2>
+            <h3> Rua: R. Eduardo Reuter, 678 - Cohab Barro Branco II<br>
+                CEP: 08473-533</h3>
+            <h2> UBS Carlos Gentile de Melo</h2>
+            <h3> Rua: Av. dos Têxteis, 3765 - Cidade Tiradentes<br>
+                CEP: 08490-600</h3>
+            <h2> UBS Castro Alves</h2>
+            <h3> Rua: Av. Sara Kubitschek x R. Caderno de Viagem nº 55, S/N - Cohab Castro Alves<br>
+                CEP: 08474-170</h3>
+            <h2> UBS Cidade Tiradentes I</h2>
+            <h3> Rua: Av. dos Têxteis, 512 - Cidade Tiradentes<br>
+                CEP: 08490-600</h3></div>
+        <div id="iguatemi" class="texto"><p> As UBS na região de Iguatemi ou proximidades são: </p>
+            <h2> UBS CDHU Palanque</h2>
+            <h3> Rua: R. Ponte da Amizade (Alt. Av. Ragueb Chohfi nº 7208), 2 - Jd. Palanque<br>
+                CEP: 08375-000</h3>
+            <h2> UBS Jardim da Conquista II</h2>
+            <h3> Rua: Trav. Sonho Lindo, 54 - Jd. Conquista<br>
+                CEP: 08345-360</h3></div>
+        <div id="itaquera" class="texto"><p> As UBS na região de Itaquera ou proximidades são: </p>
+            <h2> UBS Itaquera</h2>
+            <h3> Rua: Américo Salvador Novelli, 265<br>
+                CEP:08210-090</h3>
+                
+        </div>
+        <div id="jardim_analia_franco" class="texto"><p> As UBS na região da Jardim Anália anco ou proximidades são: </p>
+            <h2> UBS Vila Santo Estevão - Woady Jorge Kalil</h2>
+            <h3> Rua: R. Antonio Camardo, 678 - V. Gomes Cardim<br>
+                CEP: 03309-060</h3></div>
+        <div id="mooca" class="texto"><p> As UBS na região de Mooca ou proximidades são: </p>
+            <h2> UBS Mooca I</h2>
+            <h3> Rua: R. Taquari, 549 - Mooca<br>
+                CEP: 03166-000</h3>
+            <h2> Ursi Mooca</h2>
+            <h3> Rua: R. Marina Crespi, 91 - Mooca<br>
+                CEP: 03112-090</h3></div>
+        <div id="penha" class="texto"><p> As UBS na região de Penha ou proximidades são: </p>
+            <h2> UBS Chácara Cruzeiro do Sul</h2>
+            <h3> Rua: R. Mercedes Lopes, 989 - Chácara Cruzeiro do Sul<br>
+                CEP: 03614-000</h3>
+            <h2> UBS Dr. Emílio Santiago de Oliveira - Vila Esperança</h2>
+            <h3> Rua: R. Coremu, 63 - V. Esperança<br>
+                CEP: 03647-030</h3>
+            <h2> UBS Engenheiro Trindade</h2>
+            <h3> Rua: Av. Gabriela Mistral, 1168 - Eng. Trindade<br>
+                CEP: 03701-000</h3></div>
+        <div id="sao_mateus" class="texto"><p> As UBS na região de São Mateus ou proximidades são: </p>
+            <h2> UBS Jardim Colonial</h2>
+            <h3> Rua: Av. José Rodrigues Santarém, 464 - JD. Colonial<br>
+                CEP: 03968-010</h3>
+            <h2> UBS Jardim IV Centenário</h2>
+            <h3> Rua: R. Campo Florido, 482 - JD. Imperador<br>
+                CEP: 03940-000</h3>
+            <h2> UBS Jardim Nove de Julho</h2>
+            <h3> Rua: R. Sibaldo Lins, 146 - JD. Nove de Julho<br>
+                CEP: 03953-100</h3>
+            <h2> UBS Jardim Paraguaçu - Dr. Gonçalo Feliciano Alves</h2>
+            <h3> Rua: R. Taiobeiras, 125 - JD. Paraguaçu<br>
+                CEP: 03940-060</h3>
+            <h2> UBS Jardim Tietê I</h2>
+            <h3> Rua: Av. Engenho Novo, 120 - JD. Tietê<br>
+                CEP: 03943-020</h3></div>
+        <div id="tatuape" class="texto"><p> As UBS na região de Tatuapé ou proximidades são: </p>
+            <h2> UBS Vila Santo Estevão - Woady Jorge Kalil</h2>
+            <h3> Rua: R. Antonio Camardo, 678 - V. Gomes Cardim<br>
+                CEP: 03309-060</h3></div>
+        <div id="mooca_sul" class="texto"><p> As UBS na região de Mooca ou proximidades são: </p>
+            <h2> UBS Mooca I</h2>
+            <h3> Rua: R. Taquari, 549 - Mooca<br>
+                CEP: 03166-000</h3>
+            <h2> Ursi Mooca</h2>
+            <h3> Rua: R. Marina Crespi, 91 - Mooca<br>
+                CEP: 03112-090</h3></div>
+        <div id="sapopemba" class="texto"><p> As UBS na região de Sapopemba ou proximidades são: </p>
+            <h2> UBS Jardim Elba - Humberto Gastão Bodra</h2>
+            <h3> Rua: R. Batista Fergusio, 1016 - V. Cardoso Franco<br>
+                CEP: 03978-180</h3>
+            <h2> UBS Jardim Grimaldi</h2>
+            <h3> Rua: R. Pedro de Castro Velho, 523 - Vl. Bancária<br>
+                CEP: 03921-000</h3>
+            <h2> UBS Jardim Sapopemba</h2>
+            <h3> Rua: Av. João Lopes de Lima, 1151 - JD. Sapopemba<br>
+                CEP: 03976-020</h3></div>
+        <div id="vila_formosa" class="texto"><p> As UBS na região de Vila Formosa ou proximidades são: </p>
+            <h2>UBS Vila Formosa</h2>
+            <h3>PÇA. Marques de Nazaré, 111 - V. Formosa<br>CEP: 03359-070</h3>
+        
+            <h2>UBS Vila Formosa - Comendador José Gonzales</h2>
+            <h3>R. Nossa Senhora das Dores, 350 - V. Formosa<br>CEP: 03367-040</h3>
+        
+            <h2>UBS Vila Formosa - Dr. Antonio da Silveira e Oliveira</h2>
+            <h3>R. Acuruí, 720 - V. Formosa<br>CEP: 03355-000</h3>
+        
+            <h2>UBS Vila Guarani</h2>
+            <h3>R. Teresinha, 123 - Jd. Maringá<br>CEP: 03382-180</h3></div>
+        <div id="se" class="texto"><p> As UBS na região da Sé ou proximidades são: </p>
+            <h2>UBS Sé</h2>
+            <h3>R. Frederico Alvarenga, 259 - Pq. D. Pedro II<br>CEP: 01020-030</div>
+        <div id="bela_vista" class="texto"><p> <p> As UBS na região de Bela Vista ou proximidades são: </p>
+            <h2> UBS Humaitá - Dr. João de Azevedo Lage</h2>
+            <h3> Rua: R. Humaitá, 520 - Bela Vista<br>
+                CEP: 01321-010</h3>
+            <h2> UBS Nossa Senhora do Brasil - Armando D'Arienzo</h2>
+            <h3> Rua: R. Alm. Marques Leão, 684 - Morro dos Ingleses<br>
+                CEP: 01330-010</h3></p></div>
+        <div id="bom_retiro" class="texto"> <p> As UBS na região de Bom Retiro ou proximidades são: </p>
+            <h2> UBS Bom Retiro - Dr. Octavio Augusto Rodovalho</h2>
+            <h3> Rua: R. Tenente Pena, 8 - Bom Retiro<br>
+                CEP: 01127-020</h3></div>
+        <div id="cambuci" class="texto"><p> As UBS na região de Cambuci ou proximidades são: </p>
+            <h2> UBS Cambuci</h2>
+            <h3> Rua: Av. Lacerda Franco, 791 - Cambuci<br>
+                CEP: 01536-000</h3></div>
+        <div id="consolacao" class="texto"><p> As UBS na região da Consolação ou proximidades são: </p>
+            <h2> UBS Nossa Senhora do Brasil - Armando D'Arienzo</h2>
+            <h3> Rua: R. Alm. Marques Leão, 684 - Morro dos Ingleses<br>
+                CEP: 01330-010</h3></div>
+        <div id="liberdade" class="texto"><p> As UBS na região da Liberdade ou proximidades são: </p>
+            <h2>UBS Sé</h2>
+            <h3>R. Frederico Alvarenga, 259 - Pq. D. Pedro II<br>CEP: 01020-030</div>
+        <div id="republica" class="texto"><p> As UBS na região da República ou proximidades são: </p>
+            <h2> UBS República</h2>
+            <h3> Praça: Praça da Bandeira, 15 - República<br>
+                CEP: 01007-020</h3></div>
+        <div id="santa_cecilia" class="texto"><p> As UBS na região de Santa Cecília ou proximidades são: </p>
+            <h2> UBS Boracea</h2>
+            <h3> Rua: R. Boracea, 270 - Santa Cecília<br>
+                CEP: 01135-010</h3>
+            <h2> UBS Santa Cecília - Dr. Humberto Pascale</h2>
+            <h3> Rua: R. Vitorino Carmilo, 599 - Campos Eliseos<br>
+                CEP: 01153-000</h3></div>
+        <div id="butanta" class="texto"><p> As UBS na região do Butantã ou proximidades são: </p>
+            <h2> UBS Butantã</h2>
+            <h3> Rua: R. Cabral de Menezes, 51 - V. Gomes<br>
+                CEP: 05590-050</h3>
+            <h2> UBS Caxingui - Nanci Abranches</h2>
+            <h3> Rua: R. Ladislau Roman, 410 - Caxingui<br>
+                CEP: 05515-030</h3></div>
+        <div id="morumbi" class="texto"><p> As UBS na região do Morumbi ou proximidades são: </p>
+            <h2> UBS Real Parque - Dr. Paulo Mangabeira Albertaz Filho</h2>
+            <h3> Rua: R. Barão de Melgaço, 339 - Real Parque<br>
+                CEP: 05684-030</h3></div>
+        <div id="raposo_tavares" class="texto"><p> As UBS na região do Raposo Tavares ou proximidades são: </p>
+            <h2> UBS Jardim Boa Vista</h2>
+            <h3> Rua: R. Candido Fontoura, 620 - JD. Boa Vista<br>
+                CEP: 05583-070</h3>
+            <h2> UBS Jardim São Jorge</h2>
+            <h3> Rua: R. Angelo Aparecido dos Santos Dias, 331 - JD. São Jorge<br>
+                CEP: 05568-090</h3>
+            <h2> UBS Paulo VI</h2>
+            <h3> Avenida: Av. Vaticano, 69 - JD. João XXIII<br>
+                CEP: 05569-120</h3>
+            <h2> UBS Vila Borges</h2>
+            <h3> Rua: R. Jacinto de Moraes, 22 - JD. Cláudia<br>
+                CEP: 05546-040</h3></div>
+        <div id="rio_pequeno" class="texto"><p> As UBS na região do Rio Pequeno ou proximidades são: </p>
+            <h2> UBS Jardim D'Abril</h2>
+            <h3> Rua: R. Paulo Maranhão, 444 - JD. D'Abril<br>
+                CEP: 05398-030</h3>
+            <h2> UBS José Marcílio Malta Cardoso</h2>
+            <h3> Rua: R. Bernardo Guertzenstein, 45 - Rio Pequeno<br>
+                CEP: 05381-020</h3>
+            <h2> UBS Rio Pequeno - Dr. Paulo de Barros França</h2>
+            <h3> Rua: R. João Luis Mateus, 34 - Rio Pequeno<br>
+                CEP: 05379-030</h3>
+            <h2> UBS Vila Dalva - Eng. Guilherme Henrique Pinto Coelho</h2>
+            <h3> Rua: R. Gustavo Berthier, 155 - V. Dalva<br>
+                CEP: 05386-110</h3></div>
+        <div id="vila_sonia" class="texto"><p> As UBS na região da Vila Sônia ou proximidades são: </p>
+            <h2> UBS Jardim Jaqueline</h2>
+            <h3> Rua: R. Bonifácio Veronese, 10 - JD. Jaqueline<br>
+                CEP: 05529-060</h3>
+            <h2> UBS Vila Sônia</h2>
+            <h3> Rua: R. Abraão Calil Rezek, 91 - V. Sônia<br>
+                CEP: 05625-050</h3></div>
+        <div id="lapa" class="texto"><p> As UBS na região da Lapa ou proximidades são: </p>
+            <h2> UBS Vila Anastácio</h2>
+            <h3> Rua: R. Bartolomeu Paes, 686 - V. Anastácio<br>
+                CEP: 05061-050</h3>
+            <h2> UBS Vila Ipojuca - Dra. Wanda Coelho de Moraes</h2>
+            <h3> Rua: R. Catão, 1266 - V. Ipojuca<br>
+                CEP: 05049-000</h3>
+            <h2> UBS Vila Romana</h2>
+            <h3> Rua: R. Vespasiano, 679 - V. Romana<br>
+                CEP: 05044-050</h3>
+            <h2> URSI Lapa</h2>
+            <h3> Rua: R. Brigadeiro Gavião Peixoto, 727 - Lapa<br>
+                CEP: 05078-000</h3></div>
+        <div id="barra_funda" class="texto">UBS SANTA CECÍLIA - DR. HUMBERTO PASCALE
+            R. VITORINO CARMILO, 599 - CAMPOS ELISEOS
+            CEP: 01153-000 - FONE: 3826-0096 / 3826-7970</div>
+        <div id="jaguara" class="texto"><p> As UBS na região da Jaguara ou proximidades são: </p>
+            <h2> UBS Vila Jaguara</h2>
+            <h3> Rua: R. Paúva, 721 - V. Jaguara<br>
+                CEP: 05116-001</h3>
+            <h2> UBS Vila Piauí</h2>
+            <h3> Rua: Pça. Camilo Castelo Branco, 10 - V. Piauí<br>
+                CEP: 05109-270</h3></div>
+        <div id="jaguare" class="texto"><p> As UBS na região de Jaguaré ou proximidades são: </p>
+            <h2> UBS Vila Nova Jaguaré</h2>
+            <h3> Rua: R. Salatiel de Campos, 222 - Jaguaré<br>
+                CEP: 05333-010</h3></div>
+        <div id="perdizes" class="texto"><p> As UBS na região de Perdizes ou proximidades são: </p>
+            <h2> UBS Jardim Vera Cruz - Perdizes</h2>
+            <h3> Rua: R. Saramenha, 60 - Perdizes<br>
+                CEP: 01259-030</h3>
+        
+            <h2> UBS Vila Anglo - Dr. José Serra Ribeiro</h2>
+            <h3> Rua: R. Turiaçu, 1765 - Vila Pompeia<br>
+                CEP: 05005-001</h3></div>
+        <div id="vila_leopoldina" class="texto"><p> As UBS na região de Vila Leopoldina ou proximidades são: </p>
+            <h2> UBS Alto de Pinheiros</h2>
+            <h3> Avenida: Av. Queiroz Filho, 313 - Alto de Pinheiros<br>
+                CEP: 05319-010</h3>
+        
+            <h2> UBS Parque da Lapa</h2>
+            <h3> Rua: R. Bergson, 52 - Parque da Lapa<br>
+                CEP: 05301-060</h3></div>
+        <div id="pinheiros" class="texto"><p> As UBS na região de Pinheiros ou proximidades são: </p>
+            <h2> UBS Dr. Manoel Joaquim Pera</h2>
+            <h3> Rua: R. Purpurina, 280 - Vila Madalena<br>
+                CEP: 05435-030</h3></div>
+        <div id="alto_pinheiros" class="texto"><p> As UBS na região de Alto de Pinheiros ou proximidades são: </p>
+            <h2> UBS Alto de Pinheiros</h2>
+            <h3> Rua: Av. Queiroz Filho, 313 - Alto de Pinheiros<br>
+                CEP: 05319-010</h3></div>
+        <div id="itaim_bibi" class="texto"><p> As UBS na região de Itaim Bibi ou proximidades são: </p>
+            <h2> UBS Dr. José de Barros Magaldi</h2>
+            <h3> Rua: R. Salvador Cardoso, 177 - Itaim Bibi<br>
+                CEP: 04533-050</h3>
+            <h2> UBS Meninópolis - Dr. Mario Francisco Napolitano</h2>
+            <h3> Rua: R. Oscar Gomes Cardim, 128/142 - Brooklin Novo<br>
+                CEP: 04580-040</h3></div>
+        <div id="jardim_paulista" class="texto"><p> As UBS na região do Jardim Paulista ou proximidades são: </p>
+            <h2> UBS Dr. Manoel Joaquim Pera</h2>
+            <h3> Rua: R. Purpurina, 280 - V. Madalena<br>
+                CEP: 05435-030</h3></div>
+        <div id="santana" class="texto"><p> As UBS na região de Santana ou proximidades são: </p>
+            <h2> UBS Chora Menino</h2>
+            <h3> Rua: R. Copacabana, 185 - Santa Terezinha<br>
+                CEP: 02461-000</h3>
+        
+            <h2> UBS Joaquim Antonio Eirado</h2>
+            <h3> Avenida: Av. Braz Leme, 2945 - Santana<br>
+                CEP: 02022-011</h3></div>
+        <div id="mandaqui" class="texto"><p> As UBS na região de Mandaqui ou proximidades são: </p>
+            <h2> UBS Lauzane Paulista</h2>
+            <h3> Rua: R. Valorbe, 80 - Lauzane Paulista<br>
+                CEP: 02442-140</h3>
+        
+            <h2> UBS Vila Aurora - Dr. Domingos Mazzoneto de Cilo</h2>
+            <h3> Rua: R. Engenheiro Jean Buff, 126 - Chácara do Encosto<br>
+                CEP: 02417-180</h3></div>
+        <div id="jacana" class="texto"><p> As UBS na região de Jaçanã ou proximidades são: </p>
+            <h2> UBS Dr. José de Toledo Piza</h2>
+            <h3> Avenida: Av. Antonio César Neto, 387 - Jaçanã<br>
+                CEP: 02276-000</h3>
+        
+            <h2> UBS Jaçanã - Dr. Sebastião Gabriel Sayago de Laet</h2>
+            <h3> Rua: R. São Geraldino, 222 - V. Constança<br>
+                CEP: 02258-220</h3>
+        
+            <h2> UBS Parque Edu Chaves</h2>
+            <h3> Avenida: Av. Edu Chaves, 1197 - PQ. Edu Chaves<br>
+                CEP: 02229-001</h3>
+        
+            <h2> UBS Vila Nova Galvão - Sônia Regina Campanelli</h2>
+            <h3> Rua: R. Alfeu Luis Gasparini, 116 - V. Nova Galvão<br>
+                CEP: 02281-110</h3></div>
+        <div id="tremembe" class="texto"><p> As UBS na região de Tremembé ou proximidades são: </p>
+    
+            <h2> UBS Dona Mariquinha Sciascia</h2>
+            <h3> Rua: R. Dr. José Vicente, 39 - Tremembé<br>
+                CEP: 02370-080</h3>
+        
+            <h2> UBS Horto Florestal</h2>
+            <h3> Rua: R. do Horto x R. Luiz Carlos Gentile Laet nº 603, S/N - Horto Florestal<br>
+                CEP: 02377-000</h3>
+        
+            <h2> UBS Jardim Apuaña</h2>
+            <h3> Rua: R. Hum (Ref.: R. Filhos da Terra), 19 - JD. Filhos da Terra<br>
+                CEP: 02325-530</h3>
+        
+            <h2> UBS Jardim das Pedras</h2>
+            <h3> Rua: R. Clóvis Salgado, 220 - JD. das Pedras<br>
+                CEP: 02367-000</h3>
+        
+            <h2> UBS Jardim Flor de Maio</h2>
+            <h3> Avenida: Av. Nova Paulista, 561 - JD. Flor de Maio<br>
+                CEP: 02363-000</h3>
+        
+            <h2> UBS Jardim Fontalis</h2>
+            <h3> Rua: R. Antonio Piccarollo, 41 - JD. Fontalis<br>
+                CEP: 02323-000</h3>
+        
+            <h2> UBS Jardim Joamar</h2>
+            <h3> Rua: R. Aimopolo Lobo, 60 - JD. Joamar<br>
+                CEP: 02320-140</h3>
+        
+            <h2> UBS Vila Albertina - Dr. Osvaldo Marçal</h2>
+            <h3> Rua: R. Antonio Joaquim de Oliveira, 224 - V. Esmeralda<br>
+                CEP: 02356-020</h3></div>
+        <div id="vila_guilherme" class="texto"><p> As UBS na região de Vila Guilherme ou proximidades são: </p>
+    
+            <h2> UBS Carandiru</h2>
+            <h3> Rua: R. José Pereira Jorge, 305 - Carandiru<br>
+                CEP: 02067-020</h3>
+        
+            <h2> UBS Vila Guilherme</h2>
+            <h3> Rua: R. João Ventura Batista, 615 - V. Guilherme<br>
+                CEP: 02054-100</h3>
+        
+            <h2> UBS Vila Izolina Mazzei</h2>
+            <h3> Rua: R. Orlando Ribeiro Dantas, 154 - V. Izolina Mazzei<br>
+                CEP: 02083-010</h3>
+        
+            <h2> UBS Vila Leonor</h2>
+            <h3> Avenida: Av. Angelina, 518 - V. Leonor<br>
+                CEP: 02077-000</h3></div>
+        <div id="vila_maria" class="texto"><p> As UBS na região de Vila Maria ou proximidades são: </p>
+    
+            <h2> UBS Jardim Japão</h2>
+            <h3> Rua: R. Sobral Junior, 452 - V. Maria Alta<br>
+                CEP: 02130-020</h3>
+        
+            <h2> UBS Parque Novo Mundo I</h2>
+            <h3> Rua: R. Benedita Dornelas Claro, 451 - PQ. Novo Mundo<br>
+                CEP: 02168-020</h3>
+        
+            <h2> UBS Parque Novo Mundo II</h2>
+            <h3> Rua: R. Soldado Antonio Matias de Camargo, 87 - PQ. Novo Mundo<br>
+                CEP: 02188-050</h3>
+        
+            <h2> UBS Vila Maria - Dr. Luiz Paulo Gnecco</h2>
+            <h3> Rua: R. André da Fonseca, 70 - V. Munhoz<br>
+                CEP: 02135-010</h3></div>
+        <div id="tucuruvi" class="texto"><p> As UBS na região de Tucuruvi ou proximidades são: </p>
+    
+            <h2> UBS Conj. IpesP - Dr. José de Toledo Piza</h2>
+            <h3> Rua: Av. Profª. Virgilia Rodrigues A. C. Pinto, 555 - JD. Leonor Barros<br>
+                CEP: 02346-000</h3>
+        
+            <h2> UBS Vila Nivi</h2>
+            <h3> Rua: Pça. Campinópolis, 125 - V. Nivi<br>
+                CEP: 02252-160</h3>
+        
+            <h2> UBS Wamberto Dias da Costa</h2>
+            <h3> Rua: R. Paulo Cesar, 60 - Tremembé<br>
+                CEP: 02311-240</h3></div>
+        <div id="vila_medeiros" class="texto"><p> As UBS na região de Vila Medeiros ou proximidades são: </p>
+    
+            <h2> UBS Jardim Brasil</h2>
+            <h3> Rua: R. Francisco Peixoto Bezerra, 400 - JD. Brasil<br>
+                CEP: 02222-010</h3>
+        
+            <h2> UBS Vila Ede</h2>
+            <h3> Rua: R. Padre Marcos Simoni, 390 - V. Ede<br>
+                CEP: 02203-010</h3>
+        
+            <h2> UBS Vila Medeiros</h2>
+            <h3> Rua: R. Eurico Sodre, 353 - V. Medeiros<br>
+                CEP: 02215-010</h3>
+        
+            <h2> UBS Vila Sabrina</h2>
+            <h3> Rua: R. Francisco Franco Machado, 150 - V. Sabrina<br>
+                CEP: 02139-020</h3></div>
+        <div id="grajau" class="texto"><p> As UBS na região de Grajaú ou proximidades são: </p>
+    
+            <h2> UBS Alcina Pimentel Piza</h2>
+            <h3> Estrada: Estrada de Itaquaquecetuba, 8855 - Ilha do Bororé<br>
+                CEP: 04846-010</h3>
+        
+            <h2> UBS Chácara do Conde</h2>
+            <h3> Rua: R. Constelação do Esquadro, 5 - JD. Campinas<br>
+                CEP: 04858-010</h3>
+        
+            <h2> UBS Chácara do Sol</h2>
+            <h3> Rua: R. João Carlos de Oliveira, E - Chácara do Sol<br>
+                CEP: 04855-515</h3>
+        
+            <h2> UBS Chácara Santo Amaro</h2>
+            <h3> Rua: R. Luiz Carlos de Almeida, 51 - Chácara Santo Amaro<br>
+                CEP: 04875-120</h3>
+        
+            <h2> UBS Gaivotas</h2>
+            <h3> Avenida: Av. São Paulo, 23-A - JD. Gaivota<br>
+                CEP: 04849-000</h3>
+        
+            <h2> UBS Jardim Castro Alves</h2>
+            <h3> Rua: R. João Paulo Barreto, 131 - JD. Castro Alves<br>
+                CEP: 04842-150</h3>
+        
+            <h2> UBS Jardim Eliane</h2>
+            <h3> Rua: R. Henry Arthur Jones, 201 - JD. Eliana<br>
+                CEP: 04851-120</h3>
+        
+            <h2> UBS Jardim Mirna</h2>
+            <h3> Rua: R. Dr. Juvenal Hudson Ferreira, 13 - JD. Mirna<br>
+                CEP: 04856-140</h3>
+        
+            <h2> UBS Jardim Três Corações</h2>
+            <h3> Rua: R. General José de Oliveira Ramos, 275 - JD. Três Corações<br>
+                CEP: 04855-280</h3>
+        
+            <h2> UBS Parque Residencial Cocaia Independente</h2>
+            <h3> Rua: R. Filinto Milanez, 26 - PQ. Residencial Cocaia<br>
+                CEP: 04849-040</h3>
+        
+            <h2> UBS Varginha</h2>
+            <h3> Rua: R. Henrique Muzzio, 383 - JD. Varginha<br>
+                CEP: 04857-040</h3></div>
+        <div id="sacoma" class="texto"><p> As UBS na região de Sacomã ou proximidades são: </p>
+    
+            <h2> UBS Aurélio Mellone</h2>
+            <h3> Rua: R. Atilio Selva, 10 - JD. Celeste<br>
+                CEP: 04095-060</h3>
+        
+            <h2> UBS Dr. Eduardo Romano Reschilian</h2>
+            <h3> Rua: R. Dr. Lafaiete de Souza Camargo, 40 - JD. Climax<br>
+                CEP: 04077-380</h3>
+        
+            <h2> UBS Jardim Seckler</h2>
+            <h3> Rua: R. Carlos Mauro, 114 - São João Climaco<br>
+                CEP: 04240-150</h3>
+        
+            <h2> UBS Luiz Ernesto Mazzoni</h2>
+            <h3> Avenida: Av. Carlos Liviero, 566 - V. Liviero<br>
+                CEP: 04086-100</h3>
+        
+            <h2> UBS Moinho Velho II</h2>
+            <h3> Rua: R. Belgrado, 323 - Moinho Velho<br>
+                CEP: 04285-040</h3>
+        
+            <h2> UBS Parque Bristol</h2>
+            <h3> Rua: R. François Bunel, 194 - PQ. Bristol<br>
+                CEP: 04094-160</h3>
+        
+            <h2> UBS Sacomã</h2>
+            <h3> Estrada: Estrada das Lagrimas, 1403 - Sacomã<br>
+                CEP: 04232-000</h3>
+        
+            <h2> UBS Vila Arapuã</h2>
+            <h3> Rua: R. Colombo Florence, 241 - V. Arapua<br>
+                CEP: 04257-060</h3>
+        
+            <h2> UBS Vila das Mercês</h2>
+            <h3> Rua: R. Nossa Senhora das Mercês, 1315 - V. das Mercês<br>
+                CEP: 04065-001</h3></div>
+        <div id="ipiranga" class="texto"><p> As UBS na região de Ipiranga ou proximidades são: </p>
+    
+            <h2> UBS Almirante Dellamare</h2>
+            <h3> Rua: R. Alm. Mariath, 62 - V. Heliopólis<br>
+                CEP: 04218-040</h3>
+        
+            <h2> UBS Dr. Joaquim Rossini</h2>
+            <h3> Rua: R. Alvaro Fragoso, 480 - V. Carioca<br>
+                CEP: 04223-000</h3>
+        
+            <h2> UBS Dr. Oswaldo Marasca Junior</h2>
+            <h3> Avenida: Av. Dom Pedro I, 594 - Ipiranga<br>
+                CEP: 01552-000</h3>
+        
+            <h2> UBS São Vicente de Paula</h2>
+            <h3> Rua: R. Vicente da Costa, 289 - Ipiranga<br>
+                CEP: 04266-050</h3>
+        
+            <h2> UBS Vila Carioca</h2>
+            <h3> Rua: R. Antonio Frederico, 117 - Vl. Independência<br>
+                CEP: 04224-030</h3></div>
+        <div id="sapopemba_sul" class="texto"> <p> As UBS na região de Sapopemba ou proximidades são: </p>
+    
+            <h2> UBS Fazenda da Juta I</h2>
+            <h3> Rua: R. Levi Landau, 23 A - Fazenda da Juta<br>
+                CEP: 03957-720</h3>
+        
+            <h2> UBS Fazenda da Juta II</h2>
+            <h3> Rua: R. Augustin Luberti (Antiga Av. Dois), 1102 - Fazenda da Juta<br>
+                CEP: 03977-409</h3>
+        
+            <h2> UBS Iaçape - Jardim Planalto</h2>
+            <h3> Rua: R. Iaçapé, 302 - PQ. Santa Madalena<br>
+                CEP: 03983-090</h3>
+        
+            <h2> UBS Jardim dos Eucaliptos - Helio Moreira Salles</h2>
+            <h3> Rua: R. Poema das Américas, 12 - JD. dos Eucaliptos<br>
+                CEP: 03924-240</h3>
+        
+            <h2> UBS Jardim Elba - Humberto Gastão Bodra</h2>
+            <h3> Rua: R. Batista Ferguío, 1016 - V. Cardoso Franco<br>
+                CEP: 03978-180</h3>
+        
+            <h2> UBS Jardim Grimaldi</h2>
+            <h3> Rua: R. Pedro de Castro Velho, 523 - VL. Bancária<br>
+                CEP: 03921-000</h3>
+        
+            <h2> UBS Jardim Sapopemba</h2>
+            <h3> Avenida: Av. João Lopes de Lima, 1151 - JD. Sapopemba<br>
+                CEP: 03976-020</h3>
+        
+            <h2> UBS Jardim Sinha</h2>
+            <h3> Rua: R. Jim Clark, 10C - JD. Sinha<br>
+                CEP: 03923-160</h3>
+        
+            <h2> UBS Mascarenhas de Moraes</h2>
+            <h3> Rua: R. Sargento Edgar Lourenço Pinto, 116 - CJ Mal. Mascarenhas de Moraes<br>
+                CEP: 03977-180</h3>
+        
+            <h2> UBS Parque Santa Madalena</h2>
+            <h3> Rua: R. Rodrigues dos Santos, 747 - PQ. Santa Madalena<br>
+                CEP: 03983-210</h3>
+        
+            <h2> UBS Pastoral</h2>
+            <h3> Rua: R. Boleadeiras, 127 - PQ. Santa Madalena<br>
+                CEP: 03980-120</h3>
+        
+            <h2> UBS Reunidas II</h2>
+            <h3> Estrada: Estrada da Casa Grande, 1258 - V. União<br>
+                CEP: 03260-000</h3>
+        
+            <h2> UBS Teotônio Vilela</h2>
+            <h3> Avenida: Av. Arquiteto Vilanova Artigas, 1071 - JD. Sapopemba<br>
+                CEP: 03928-240</h3>
+        
+            <h2> UBS Vila Renato</h2>
+            <h3> Rua: R. Bernardino Ferraz, 54 - V. Renato<br>
+                CEP: 03978-210</h3></div>
+        <div id="moema" class="texto"><p> As UBS na região de Moema ou proximidades são: </p>
+    
+            <h2> UBS Dr. Sigmund Freud - Indianópolis</h2>
+            <h3> Avenida: Av. Indianópolis, 650 - Moema<br>
+                CEP: 04062-001</h3>
+        
+            <h2> UBS Max Perlman - Vila Olímpia</h2>
+            <h3> Rua: R. Jacques Felix, 499 - V. Nova Conceição<br>
+                CEP: 04509-001</h3></div>
+                <div id="aricanduva" class="texto">
+                    <p> As UBS na região de Aricanduva ou proximidades são: </p>
+                    
+                    <h2> UBS Jardim Iva</h2>
+                    <h3> Rua: R. Miguel Bastos Soares, 55 - JD. IVA<br>
+                        CEP: 03910-000</h3>
+                
+                    <h2> UBS Vila Antonieta</h2>
+                    <h3> Rua: R. Coronel João de Oliveira Melo, 440 - V. ANTONIETA<br>
+                        CEP: 03474-020</h3>
+                
+                    <h2> UBS Vila Nova York</h2>
+                    <h3> Rua: R. Dr. Edgard Magalhães Noronha, 200 - V. NOVA YORK<br>
+                        CEP: 03480-000</h3>
+                </div>
+    </div>
+
+    </main>
+    
+    <!--JS para evento do select-->
+    <script>
+        function selecionadordeBairro() {
+            const bairroSelect = document.getElementById('idbairro');
+            const selectedValue = bairroSelect.value;
+            const textos = document.querySelectorAll('.texto');
+
+            
+            textos.forEach(texto => {
+                texto.style.display = 'none';
+            });
+
+            
+            const textoSelecionado = document.getElementById(selectedValue);
+            if (textoSelecionado) {
+                textoSelecionado.style.display = 'block';
+            }
+
+            
+        }
+    </script>
+
+    <br><br><br>
+    <div class="cta-container">
+        <button class="cta-button">Clique aqui</button>
+        <div class="map-area">
+            <!-- Insira o iframe do Google Maps aqui -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29256.504979012687!2d-46.51799841539302!3d-23.566176325848847!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1729455198360!5m2!1spt-BR!2sbr" width="300" height="200"></iframe>
+        </div>
+    </div>
+
+    <!-- rodape -->
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.x.com"><i class="bi bi-twitter-x"></i></a>
+        </div>
+        <p>&copy; 2024 <a href="index.html">IBRACC.</a>  Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -16,6 +16,8 @@ header {
     background-color: #fde6f6;
     border-bottom: 1px solid #e0e0e0;
     padding: 10px 20px;
+    filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.05));
+
 }
 
 .header-container {
@@ -115,6 +117,7 @@ nav ul li a:hover { /*baguio de passar o mouse por cima*/
     height: absolute;
 }
 
+
 .slide-text {
     position: absolute;
     top: 50%;
@@ -138,6 +141,7 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.1));
 }
 
 /*aspas caralho*/
@@ -192,8 +196,12 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
     width: 100vw; 
     height: 600px;
     box-sizing: border-box; 
+    filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.2));
+   
 }
-
+.proposito {
+    filter: drop-shadow(10px 0px 20px rgb(255, 255, 255, 10));
+}
 .about-section h1 {
     font-size: 2.5em; 
     margin-top: -50px;  
@@ -275,7 +283,7 @@ position: absolute;
 right: 0px;
 bottom: 40%;
 opacity: 0;
-transition: right 0.80s;
+transition: right 0.80s, opacity 0.80s, color 0.50s;
 filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.5));
 }
 .direita {
@@ -284,7 +292,7 @@ position: absolute;
 left: 0px;
 bottom: 40%;
 opacity: 0;
-transition: left 0.80s;
+transition: left 0.80s, opacity 0.80s, color 0.50s;
 filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.5));
 }
 
@@ -292,11 +300,16 @@ filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.5));
 right: 170px;
 opacity: 1;
 
+
 }
 
 .slider:hover .direita {
     left: 170px;
     opacity: 1;
+    
     }
 
-    
+.main-section .slider .slide .seta .esquerda:hover, .direita:hover {
+color: #ff66c4;
+}           /* n ta funfando */
+

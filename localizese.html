@@ -17,7 +17,7 @@
 
        
        main {
-        margin-bottom: 500px;
+        margin-bottom: 200px;
 
        }
        h1 {
@@ -26,7 +26,28 @@
         width: 50%;
 
        }
-         
+   
+
+    .bairro {
+        font-size: 30px;
+        align-items: center;
+       
+
+    }
+
+   .unidades {
+        width: 100%;
+        height: auto;
+        filter: brightness(50%);
+        position: relative;
+    }
+    .titlee {
+        font-size: 60px;
+        align-items: center;
+        margin-left: 170px;
+        position: absolute;
+        color: aliceblue;
+    }
     </style>    
 
         <link rel="stylesheet" href="style.css">
@@ -52,9 +73,16 @@
 
     <!-- CONTEUDO AQUI-->
     <main>
-        <h1>Localize-se </h1>
         
-        <label for="bairro"> Bairro </label>
+        <section>
+                <div class="unidades">
+                    <h1><span class="titlee">Localize-se    </span> </h1>
+                    <img src="fotos e imagens/foto-ubs-breno-esaki-ses-df.jpg">
+                    
+                </div>
+        </section>
+        <center>
+        <label for="bairro"> <span class="bairro"> Bairro </span> </label>
         <form name="formid">
             <select name="escolhebairro" id="idbairro" onchange="selecionadordeBairro()">
                 <optgroup label="Zona Leste">
@@ -719,7 +747,7 @@
                         CEP: 03480-000</h3>
                 </div>
     </div>
-
+</center>
     </main>
     
     <!--JS para evento do select-->

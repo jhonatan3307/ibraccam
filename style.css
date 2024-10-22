@@ -57,6 +57,7 @@ header {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
+    
 }
 
 .guerreiras h1 {
@@ -139,6 +140,11 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
     margin-top: 20px;
 }
 
+/*aspas caralho*/
+.aspas {
+    font-size: 25px;
+}
+
 .cta-button {     /*so centralizei o botao e o mapa pq tava dando nos nervo ja fi*/
     background-color: #f7b8e4;
     color: #ff66c4;
@@ -151,7 +157,7 @@ atualizacao: pensei em fazer o mapa do coiso aqui, oq vcs acham?
     height: 50px;
     text-align: center; 
     font-weight: 700;
-    font-size: 10px;
+    font-size: 16px;
 }
 
 .map-area {

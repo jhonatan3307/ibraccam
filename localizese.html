@@ -3,65 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Localize-se </title>
+    <title>IBRACCAM</title>
 
     <!--link pra fav icon do site-->
     <link rel="icon" type="image/x-icon" href="fotos e imagens/ibraccamico.ico">
-
-    <link rel="stylesheet" href="style.css">
-    <!--esse stylesheet e pra colocar fotos das redes sociais ok? se nao quiser mexer blz-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         .texto {
             display: none; /* Esconde todos os textos inicialmente */
             margin-top: 20px;
         }
+
+       
+       main {
+        margin-bottom: 500px;
+
+       }
+       h1 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+
+       }
          
-    </style>
+    </style>    
+
+        <link rel="stylesheet" href="style.css">
+    <!--esse stylesheet e pra colocar fotos das reder sociais ok? se nao quiser mexer blz-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="fotos e imagens/logo.png" alt="Logo">
-            </div>
-            <nav>
-                <ul class="menu">
-                    <li><a href="#">Sobre</a>
-                        <ul class="submenu">
-                            <li><a href="#">Nossa Missão</a></li>
-                            <br>
-                            <li><a href="#">História</a></li>
-                            <br>
-                            <li><a href="#">Equipe</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Câncer de Mama</a>
-                        <ul class="submenu">
-                            <li><a href="#">Sintomas</a></li>
-                            <br>
-                            <li><a href="#">Tratamentos</a></li>
-                            <br>
-                            <li><a href="#">Prevenção</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Campanhas</a>
-                        <ul class="submenu">
-                            <li><a href="#">Outubro Rosa</a></li>
-                            <br>
-                            <li><a href="#">Doe Agora</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
+      <div class="header-container">
+        <div class="logo">
+            <a href="index.html"><img src="fotos e imagens/logocalabreso.svg" alt="Logo"></a>
         </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Sobre nós</a> </li>
+          
+          <li><a href="#">Localize-se</a> </li>
+         
+          <li><a href="#">Contato</a> </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- CONTEUDO AQUI-->
     <main>
         <h1>Localize-se </h1>
+        
         <label for="bairro"> Bairro </label>
         <form name="formid">
             <select name="escolhebairro" id="idbairro" onchange="selecionadordeBairro()">
@@ -727,14 +719,14 @@
         }
     </script>
 
-    <br><br><br>
-    <div class="cta-container">
-        <button class="cta-button">Clique aqui</button>
-        <div class="map-area">
+    
+   
+        
+        
             <!-- Insira o iframe do Google Maps aqui -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29256.504979012687!2d-46.51799841539302!3d-23.566176325848847!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1729455198360!5m2!1spt-BR!2sbr" width="300" height="200"></iframe>
-        </div>
-    </div>
+           <center><iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d29256.504979012687!2d-46.51799841539302!3d-23.566176325848847!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1729455198360!5m2!1spt-BR!2sbr" width="1200" height="300"></iframe>
+           </center> 
+    
 
     <!-- rodape -->
     <footer>

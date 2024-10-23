@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBRACCAM</title>
+    <title>IBRACCAM - LOCALIZE-SE</title>
 
     <!--link pra fav icon do site-->
     <link rel="icon" type="image/x-icon" href="fotos e imagens/ibraccamico.ico">
@@ -13,19 +13,28 @@
         .texto {
             display: none; /* Esconde todos os textos inicialmente */
             margin-top: 20px;
+            font-size: 20px;
+            color: black;
         }
 
        
        main {
+<<<<<<< HEAD
         margin-bottom: 200px;
+=======
+        margin-bottom: 400px;
+>>>>>>> ef33a393170bf58d61035b21793623666f8e3b81
 
        }
+
+
        h1 {
         margin-left: auto;
         margin-right: auto;
         width: 50%;
-
+        
        }
+<<<<<<< HEAD
    
 
     .bairro {
@@ -49,6 +58,95 @@
         color: aliceblue;
     }
     </style>    
+=======
+       .localize-se {
+            position: relative;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .localize-se img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 100px;
+        }
+
+        .localize-se h1 {
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 32px;
+        }
+
+        .localize-se p {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 26px;
+        }
+
+        form {
+    margin-top: 20px;
+    text-align: center;
+    background-color: linear-gradient(0deg,  #ff66c4,#fca8d8,#fde6f6);
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+    display: block;
+}
+
+select {
+    width: 50%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #ff4081;
+    border-radius: 5px;
+    background-color: linear-gradient(0deg,  #ff66c4,#fca8d8,#fde6f6);
+    color: black;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+    border-color: #ff4081;;
+    box-shadow: 0 0 8px #ff4081;;
+    outline: none;
+}
+
+/* Centralização e espaçamento */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+}
+
+/* Estilo do botão (caso queira adicionar um) */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: linear-gradient(0deg,  #ff66c4,#fca8d8,#fde6f6);
+    background-color: #ff4081;
+    border: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4081;
+}
+    </style>       
+>>>>>>> ef33a393170bf58d61035b21793623666f8e3b81
 
         <link rel="stylesheet" href="style.css">
     <!--esse stylesheet e pra colocar fotos das reder sociais ok? se nao quiser mexer blz-->
@@ -62,17 +160,18 @@
         </div>
       <nav>
         <ul class="menu">
-          <li><a href="#">Sobre nós</a> </li>
+          <li><a href="index.html">Home</a> </li>
           
-          <li><a href="#">Localize-se</a> </li>
+          <li><a href="sobrenos.html">Sobre nós</a> </li>
          
-          <li><a href="#">Contato</a> </li>
+          <li><a href="contato.html">Contato</a> </li>
         </ul>
       </nav>
     </header>
 
     <!-- CONTEUDO AQUI-->
     <main>
+<<<<<<< HEAD
         
         <section>
                 <div class="unidades">
@@ -83,6 +182,21 @@
         </section>
         <center>
         <label for="bairro"> <span class="bairro"> Bairro </span> </label>
+=======
+            <div class="localize-se">
+                 <img src="fotos e imagens/ubs.jpg" alt="ubslinda">
+                 <h1>Localize-se</h1>
+                 <p><br>A cidade está oferecendo mamografias gratuitas
+                    <br>em diversas Unidades Básicas de Saúde (UBS).
+                    <br>Essa é uma ótima oportunidade para cuidar da saúde e
+                    <br>detectar o câncer de mama precocemente.</p>
+            </div>
+            <br><br>       
+            <center>
+                
+        <label for="bairro"><strong> Bairro </strong></label>
+        <br>
+>>>>>>> ef33a393170bf58d61035b21793623666f8e3b81
         <form name="formid">
             <select name="escolhebairro" id="idbairro" onchange="selecionadordeBairro()">
                 <optgroup label="Zona Leste">
@@ -747,7 +861,11 @@
                         CEP: 03480-000</h3>
                 </div>
     </div>
+<<<<<<< HEAD
 </center>
+=======
+    <center>
+>>>>>>> ef33a393170bf58d61035b21793623666f8e3b81
     </main>
     
     <!--JS para evento do select-->
